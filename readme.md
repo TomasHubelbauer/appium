@@ -97,3 +97,37 @@ The Appium Desktop UI will show this in the Appium Server logs:
 
 - [ ] Update the Appium Inspector screenshot to use `/wd/hub` and then again to
   use the default (`/` placeholder) for Remote Path once the above is resolved
+
+### First steps with Appium Inspector
+
+Appium Inspector needs to have a set of capabilities provided to know what to do
+once it connects to the Appium Server.
+
+See the [capabilities documentation][caps] for the available capabilities.
+
+[caps]: https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/caps.md
+
+A minimal set of capabilities for the iOS Simulator looks like this:
+
+```json
+{
+  "platformName": "iOS",
+  "platformVersion": "15.0",
+  "deviceName": "iPhone XS Max",
+  "app": "/path/to/my.app"
+}
+```
+
+- `platformName` must be `iOS` for iOS and iOS Simulator
+- `platformVersion` is the iOS version
+- `deviceName` is as per `instruments -s devices`
+  - `instruments` come with [XCode Command Line Developer Tools](xcode-clt)
+  - `xcode-select --install` displays the current CLTs
+- `app` is a local or remote path to an IPA (iOS device) or APP (iOS Simulator)
+  file
+  - See also `bundleId` for automating an existing app on iOS
+
+[Here's how you can get the IPA or APP file from XCode][xcode-ipa-app]
+
+[xcode-clt]: https://developer.apple.com/download/all
+[xcode-ipa-app]: https://stackoverflow.com/q/1984727/2715716
