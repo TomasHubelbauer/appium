@@ -71,4 +71,29 @@ Download whichever format of the file and follow the same instructions as for
 Appium Desktop above to make the file runnable on macOS Big Sur. Install Appium
 Inspector in the same way and pin it to the Dock.
 
+The combinations of versions of Appium Desktop and Appium Inspector that I am
+using at the moment (Appium Desktop 1.22.0 and Appium Inspector 2021.9.2)
+require that in Appium Inspector, the Remote Path field is set to `/wd/hub`
+instead of the default `/` (which is coerced to `/session`). This is as per the
+release notes of Appium Desktop which state:
+
+> The version still expects to have /wd/hub prefix as Remote Path
+
+Without this change, Appium Inspector will yield this error when clicking Start
+Session:
+
+> Failed to create session. The requested resource could not be found, …
+
+The Appium Desktop UI will show this in the Appium Server logs:
+
+```
+[HTTP] No route found for /session
+```
+
+- [ ] Remove this information once Appium Desktop includes a version of Appium
+  Server which no longer requires this
+
 ![Appium Inspector screenshot](appium-inspector.png)
+
+- [ ] Update the Appium Inspector screenshot to use `/wd/hub` and then again to
+  use the default (`/` placeholder) for Remote Path once the above is resolved
