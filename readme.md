@@ -59,6 +59,8 @@ Run Appium Desktop and click Start Server to start Appium Server:
 
 ![Appium Desktop screenshot](appium-desktop.png)
 
+![Appium Server screenshot](appium-server.png)
+
 ### [Appium Inspector](https://github.com/appium/appium-inspector)
 
 Go to [the latest release of Appium Inspector][appium-inspector-latest].
@@ -68,3 +70,5 @@ Go to [the latest release of Appium Inspector][appium-inspector-latest].
 Download whichever format of the file and follow the same instructions as for
 Appium Desktop above to make the file runnable on macOS Big Sur. Install Appium
 Inspector in the same way and pin it to the Dock.
+
+![Appium Inspector screenshot](appium-inspector.png)
