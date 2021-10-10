@@ -5,6 +5,8 @@
 Appium is a software suite for automating testing of mobile applications. It is
 developed by Sauce Labs.
 
+[Appium website](https://appium.io)
+
 ## How does Appium work?
 
 At the core of Appium is the Appium Server, which is a service which is able to
