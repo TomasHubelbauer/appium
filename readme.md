@@ -55,7 +55,7 @@ pinned to the Dock.
 
 Run Appium Desktop and click Start Server to start Appium Server:
 
-- [ ] Add the Appium Desktop screenshot here
+![Appium Desktop screenshot](appium-desktop.png)
 
 ### [Appium Inspector](https://github.com/appium/appium-inspector)
 
